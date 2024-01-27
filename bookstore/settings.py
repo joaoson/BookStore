@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-@@%h_iae*1#0+v9^a0_(b7ijf+p#1(gcyw2c3scfifn3=xe8so
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost","127.0.0.1","ebac-bookstore.herokuapp.com","john.pythonanywhere.com"]
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
@@ -149,12 +149,6 @@ INTERNAL_IPS = [
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "default_secret_key")
 
-DEBUG = int(os.environ.get("DEBUG", default=0))
 
 # 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
-ALLOWED_HOSTS = ["localhost","127.0.0.1","ebac-bookstore.herokuapp.com","john.pythonanywhere.com"]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
