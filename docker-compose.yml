@@ -28,7 +28,8 @@ services:
      - db
 networks:
   backend: 
+  
     driver: bridge
 volumes:
   postgres_data:
-  app_data:
+  app_data: 
